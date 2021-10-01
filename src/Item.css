@@ -1,0 +1,41 @@
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  text-transform: capitalize;
+  background: rgb(30, 132, 226);
+  background: linear-gradient(
+    112deg,
+    rgba(30, 132, 226, 1) 0%,
+    rgba(12, 7, 155, 1) 100%
+  );
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1000;
+}
+.line {
+  opacity: 0;
+  position: absolute;
+  width: 108%;
+  height: 1.5px;
+  background-color: greenyellow;
+  top: 50%;
+  left: -18px;
+  transition: .3s ease;
+}
+.todoItem.active {
+  filter: brightness(50%);
+}
+.todoItem.active .line{
+  opacity: 1;
+}
+.title.active {
+  filter: brightness(50%);
+}
+.title.active .line{
+  opacity: 1;
+}
+
